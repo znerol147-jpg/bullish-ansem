@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bullish Ansem | $BULLISH on Solana</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Space Grotesk & Clash Display alternative -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            solana: {
+              purple: '#9945FF',
+              green: '#14F195',
+              blue: '#00C2FF',
+              dark: '#08090D',
+              card: 'rgba(18, 20, 29, 0.7)',
+            },
+            acid: '#22c55e',
+          },
+          animation: {
+            'float': 'float 5s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 3s infinite',
+            'marquee': 'marquee 18s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.4', filter: 'blur(40px)' },
+              '50%': { opacity: '0.8', filter: 'blur(55px)' },
+            },
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Neon glow and glass utilities */
+    .glass-panel {
+      background: rgba(14, 17, 27, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(153, 69, 255, 0.2);
+    }
+    .neon-text-green {
+      text-shadow: 0 0 20px rgba(20, 241, 149, 0.6);
+    }
+    .neon-border-glow {
+      box-shadow: 0 0 25px -5px rgba(20, 241, 149, 0.3), inset 0 0 15px -5px rgba(153, 69, 255, 0.3);
+    }
+  </style>
+</head>
+
+<body class="bg-solana-dark text-slate-100 font-body antialiased overflow-x-hidden selection:bg-solana-green selection:text-black">
+
+  <!-- Ambient Glowing Background Blobs -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div class="absolute -top-32 left-1/4 w-96 h-96 bg-solana-purple/30 rounded-full animate-pulse-glow"></div>
+    <div class="absolute top-1/3 -right-20 w-[30rem] h-[30rem] bg-solana-green/20 rounded-full animate-pulse-glow"></div>
+    <div class="absolute bottom-10 left-10 w-96 h-96 bg-solana-blue/20 rounded-full animate-pulse-glow"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="fixed top-4 inset-x-0 z-50 px-4 sm:px-8">
+    <nav class="max-w-6xl mx-auto glass-panel rounded-2xl px-6 py-4 flex items-center justify-between shadow-2xl">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-solana-purple to-solana-green p-[2px] shadow-lg group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-black rounded-[10px] flex items-center justify-center font-display font-black text-solana-green text-lg">
+            ⚡
+          </div>
+        </div>
+        <span class="font-display font-extrabold text-xl tracking-wider uppercase bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-solana-green">
+          $BULLISH Ansem
+        </span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-300">
+        <a href="#about" class="hover:text-solana-green transition-colors">About</a>
+        <a href="#how-to-buy" class="hover:text-solana-green transition-colors">How to Buy</a>
+        <a href="#tokenomics" class="hover:text-solana-green transition-colors">Tokenomics</a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="https://raydium.io" target="_blank" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-solana-purple via-solana-blue to-solana-green text-black font-extrabold text-sm tracking-wide hover:brightness-110 hover:shadow-[0_0_20px_rgba(20,241,149,0.5)] transition-all">
+          Buy Now
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-36 pb-20 md:pt-44 md:pb-32 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Hero Left (Content) -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-solana-purple/10 border border-solana-purple/30 text-solana-green text-xs md:text-sm font-semibold tracking-wider uppercase">
+          <span class="w-2 h-2 rounded-full bg-solana-green animate-ping"></span>
+          Solana's Most Bullish Energy
+        </div>
+        
+        <h1 class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl leading-tight uppercase tracking-tight">
+          Stay <span class="bg-clip-text text-transparent bg-gradient-to-r from-solana-green via-teal-300 to-solana-purple">Green</span>.<br>
+          Stay <span class="text-white neon-text-green">Bullish</span>.
+        </h1>
+
+        <p class="text-slate-300 text-lg md:text-xl font-normal max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          Inspired by the culture, the timeline, and the purest alpha on Solana. We don’t fade the conviction light up the green smoke and ride the momentum.
+        </p>
+
+        <!-- Contract Address Bar -->
+        <div class="p-2 sm:p-2.5 rounded-2xl glass-panel flex items-center justify-between gap-3 max-w-lg mx-auto lg:mx-0 border-solana-green/30">
+          <div class="flex items-center gap-2.5 pl-2 overflow-hidden">
+            <span class="text-xs uppercase font-bold text-solana-green bg-solana-green/10 px-2.5 py-1 rounded-md">CA:</span>
+            <span id="ca-text" class="text-xs sm:text-sm font-mono text-slate-300 truncate">Coming Soon</span>
+          </div>
+          <button onclick="copyCA()" class="shrink-0 px-4 py-2 bg-white/10 hover:bg-solana-green hover:text-black rounded-xl text-xs font-bold transition-all flex items-center gap-1.5">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <span id="copy-btn-text">Copy</span>
+          </button>
+        </div>
+
+        <!-- Hero Buttons -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+          <a href="https://dexscreener.com" target="_blank" class="px-7 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-solana-purple/50 font-bold text-sm flex items-center gap-2 transition-all">
+            <i data-lucide="line-chart" class="w-4 h-4 text-solana-green"></i> Live Chart
+          </a>
+          <a href="https://t.me" target="_blank" class="px-7 py-3.5 rounded-xl bg-[#229ED9]/10 hover:bg-[#229ED9]/20 border border-[#229ED9]/30 text-[#229ED9] font-bold text-sm flex items-center gap-2 transition-all">
+            <i data-lucide="send" class="w-4 h-4"></i> Join Telegram
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Right (Visual/Avatar) -->
+      <div class="lg:col-span-5 flex justify-center relative">
+        <div class="relative w-72 h-72 sm:w-96 sm:h-96 group animate-float">
+          
+          <!-- Solana Glow Backdrop -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-solana-purple via-solana-blue to-solana-green rounded-3xl blur-2xl opacity-40 group-hover:opacity-75 transition-opacity"></div>
+          
+          <!-- Image Box (Replace src with your uploaded image) -->
+          <div class="relative w-full h-full rounded-3xl overflow-hidden glass-panel neon-border-glow p-2 bg-black/60">
+            <!-- Put image here -->
+            <img src="hansem.jpg" alt="Bullish Ansem" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80'" class="w-full h-full object-cover rounded-2xl" />
+            
+            <div class="absolute bottom-4 left-4 right-4 bg-black/75 backdrop-blur-md border border-white/10 rounded-xl p-3 flex items-center justify-between">
+              <div>
+                <p class="text-xs text-slate-400 font-medium">Status</p>
+                <p class="text-sm font-bold text-solana-green flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-solana-green animate-pulse"></span> Ultra Bullish
+                </p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs text-slate-400 font-medium">Network</p>
+                <p class="text-sm font-bold text-solana-purple">Solana Mainnet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Marquee Banner -->
+  <div class="w-full bg-gradient-to-r from-solana-purple via-solana-blue to-solana-green py-3 overflow-hidden shadow-[0_0_20px_rgba(153,69,255,0.4)]">
+    <div class="flex whitespace-nowrap animate-marquee font-display font-black text-black text-sm tracking-widest uppercase gap-8">
+      <span>🚀 $BULLISH ANSEM ON SOLANA</span>
+      <span>•</span>
+      <span>NEVER FADE THE ALPHA</span>
+      <span>•</span>
+      <span>0% TAX & LP BURNED</span>
+      <span>•</span>
+      <span>PURE CULTURE & MOMENTUM</span>
+      <span>•</span>
+      <span>🚀 $BULLISH ANSEM ON SOLANA</span>
+      <span>•</span>
+      <span>NEVER FADE THE ALPHA</span>
+      <span>•</span>
+      <span>0% TAX & LP BURNED</span>
+      <span>•</span>
+      <span>PURE CULTURE & MOMENTUM</span>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-4 sm:px-6 relative">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-solana-purple/20 rounded-full blur-2xl"></div>
+            <h3 class="font-display font-bold text-2xl text-white mb-4">The Narrative</h3>
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base space-y-3">
+              Solana timelines run on high-conviction energy and unapologetic culture. <strong class="text-solana-green">$BULLISH</strong> embodies the iconic green-lit mindset where every dip is merely liquidity for the next mega run.
+            </p>
+            
+            <div class="grid grid-cols-2 gap-4 mt-6">
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/5">
+                <div class="text-2xl font-black font-display text-solana-green">0%</div>
+                <div class="text-xs text-slate-400 mt-1 uppercase font-semibold">Buy & Sell Tax</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/5">
+                <div class="text-2xl font-black font-display text-solana-purple">100%</div>
+                <div class="text-xs text-slate-400 mt-1 uppercase font-semibold">LP Burned</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-5 text-center lg:text-left">
+          <div class="text-solana-green font-mono uppercase tracking-widest text-xs font-bold">About The Movement</div>
+          <h2 class="font-display text-3xl sm:text-5xl font-extrabold uppercase leading-tight">
+            Built for the degens who never blink.
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Bullish Ansem is the quintessential Solana meme token designed to rally the community around relentless optimism, high-frequency trading vibe, and unshakeable conviction.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How To Buy Section -->
+  <section id="how-to-buy" class="py-20 px-4 sm:px-6 relative bg-black/40">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <div class="text-solana-purple font-mono uppercase tracking-widest text-xs font-bold">Step-by-Step Guide</div>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold uppercase">How to buy $BULLISH</h2>
+        <p class="text-slate-400 text-sm sm:text-base">Getting into the position takes less than two minutes on Solana.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="glass-panel p-6 rounded-2xl border-white/10 hover:border-solana-green/40 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-solana-purple/20 text-solana-purple flex items-center justify-center font-display font-black text-xl mb-4 group-hover:scale-110 transition-transform">
+            01
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-2">Create Phantom</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Download the Phantom or Solflare wallet from the official store or mobile app store.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-panel p-6 rounded-2xl border-white/10 hover:border-solana-green/40 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-solana-blue/20 text-solana-blue flex items-center justify-center font-display font-black text-xl mb-4 group-hover:scale-110 transition-transform">
+            02
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-2">Fund With SOL</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Purchase SOL on any major exchange (Binance, Coinbase, Bybit) and transfer it directly to your wallet.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-panel p-6 rounded-2xl border-white/10 hover:border-solana-green/40 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-solana-green/20 text-solana-green flex items-center justify-center font-display font-black text-xl mb-4 group-hover:scale-110 transition-transform">
+            03
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-2">Connect to DEX</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Go to Raydium.io or Jupiter (jup.ag) and connect your Solana wallet in one click.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-panel p-6 rounded-2xl border-white/10 hover:border-solana-green/40 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-acid/20 text-acid flex items-center justify-center font-display font-black text-xl mb-4 group-hover:scale-110 transition-transform">
+            04
+          </div>
+          <h4 class="font-display font-bold text-lg text-white mb-2">Swap $BULLISH</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Paste the official Contract Address into the swap bar, specify amount, and confirm the transaction!
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Socials & Community CTA -->
+  <section class="py-24 px-4 sm:px-6 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto glass-panel p-8 sm:p-14 rounded-3xl text-center relative border-solana-purple/30">
+      
+      <div class="absolute inset-0 bg-gradient-to-b from-solana-purple/10 to-transparent pointer-events-none rounded-3xl"></div>
+
+      <h2 class="font-display text-3xl sm:text-5xl font-extrabold uppercase mb-4 tracking-tight">
+        Join The <span class="bg-clip-text text-transparent bg-gradient-to-r from-solana-green to-solana-blue">Cult</span>
+      </h2>
+      <p class="text-slate-300 max-w-xl mx-auto mb-8 text-sm sm:text-base">
+        Raids, alpha chats, memes, and daily spaces. Don't trade in isolation surround yourself with the most bullish degens on CT.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <!-- Twitter / X -->
+        <a href="https://x.com" target="_blank" class="px-8 py-4 rounded-2xl bg-white text-black font-extrabold text-sm flex items-center gap-3 hover:bg-solana-green hover:shadow-[0_0_25px_rgba(20,241,149,0.5)] transition-all">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Follow on X
+        </a>
+
+        <!-- Telegram -->
+        <a href="https://t.me" target="_blank" class="px-8 py-4 rounded-2xl bg-[#229ED9] text-white font-extrabold text-sm flex items-center gap-3 hover:brightness-110 hover:shadow-[0_0_25px_rgba(34,158,217,0.5)] transition-all">
+          <i data-lucide="send" class="w-5 h-5"></i>
+          Join Telegram
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-10 px-4 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 Bullish Ansem ($BULLISH). All Rights Reserved.</div>
+      <div>Disclaimer: $BULLISH is a community meme coin created for entertainment purposes.</div>
+    </div>
+  </footer>
+
+  <!-- Script for Copy to Clipboard -->
+  <script>
+    lucide.createIcons();
+
+    function copyCA() {
+      const ca = document.getElementById('ca-text').innerText;
+      navigator.clipboard.writeText(ca).then(() => {
+        const btnText = document.getElementById('copy-btn-text');
+        btnText.innerText = 'Copied!';
+        setTimeout(() => {
+          btnText.innerText = 'Copy';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
